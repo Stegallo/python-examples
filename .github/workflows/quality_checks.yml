@@ -17,7 +17,7 @@ jobs:
       - name: Install dependencies
         run: pip install pytest pytest-cov flake8 mypy pydocstyle
       - name: Run test cases
-        run: python -m pytest --cov-report xml --cov-report term --cov-report html --cov tests
+        run: python -m pytest --cov-report xml --cov-report term --cov-report html --cov .
       - name: Check formatting style
         run: python -m flake8 --count
       - name: Check type hints
