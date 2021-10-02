@@ -1,2 +1,6 @@
 """Hello World module."""
-print("hello world")
+
+
+def print_hello() -> None:
+    """Prints hello world."""
+    print("hello world")
