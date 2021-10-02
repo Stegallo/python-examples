@@ -1,3 +1,2 @@
 """Hello World module."""
-print("hello world"
-     )
+print("hello world")
