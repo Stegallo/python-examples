@@ -15,7 +15,7 @@ jobs:
         with:
           python-version: 3.9
       - name: Install dependencies
-        run: pip install pytest flake8 mypy pydocstyle
+        run: pip install pytest pytest-cov flake8 mypy pydocstyle
       - name: Run test cases
         run: python -m pytest --cov-report xml --cov-report term --cov-report html --cov tests
       - name: Check formatting style
