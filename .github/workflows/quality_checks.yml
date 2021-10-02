@@ -1,0 +1,21 @@
+name: Quality Checks
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  runsLint:
+    runs-on: python:3.9
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Install dependencies
+        run: pip install flake8 mypy pydocstyle
+      - name: Check formatting style
+        run: python -m flake8 --count
+      - name: Check type hints
+        run: python -m mypy
+      - name: Check documentation
+        run: python -m pydocstyle
