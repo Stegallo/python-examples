@@ -13,10 +13,16 @@ def get_numbers_and_square(num_list: list) -> dict:
     return {num: num * num for num in num_list}
 
 
+def get_unique_numbers(num_list: list) -> set:
+    """Returns unique values from a list."""
+    return {num for num in num_list}
+
+
 def main() -> None:
     """Main func."""
     print(f"{get_odd_numbers(L)=}")
     print(f"{get_numbers_and_square(L)=}")
+    print(f"{get_unique_numbers(L)=}")
 
 
 if __name__ == "__main__":
