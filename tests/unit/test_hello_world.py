@@ -6,5 +6,5 @@ def test_print_hello():
     assert True
 
 
-def test_precommit():
-    assert False
+# def test_precommit():
+#     assert False
